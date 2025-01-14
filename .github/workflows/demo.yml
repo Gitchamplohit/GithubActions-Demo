@@ -15,5 +15,10 @@ jobs:
             name: welcome-job
         steps:
             - name: "Its a test welcome step"
-              run: echo "this is a $ENV job of $name"
+              run: |
+               echo "this is a $ENV job of $name"
+            - name: "printing inubilt env var"
+              run: |
+                echo "this is ${{ github.workflow}}"|
+
 
