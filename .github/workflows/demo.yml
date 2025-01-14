@@ -20,4 +20,7 @@ jobs:
             - name: "printing inubilt env var"
               run: echo "this is ${{ github.workflow}}"
 
+            - name: "This is to print custom-var"
+              run: echo "${{vars.CUSTOM_VAR}}"
+
 
