@@ -12,8 +12,8 @@ jobs:
     welcome_job:
         runs-on: ubuntu:latest
         env:
-            name: welcome
+            name: welcome-job
         steps:
             - name: "Its a test welcome step"
               run: echo "this is a $ENV job of $name"
-              
+
