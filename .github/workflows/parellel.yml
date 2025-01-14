@@ -1,0 +1,27 @@
+  name: first-workflow
+
+  on:
+    push:
+      branches:
+        - main
+
+  env:
+    ENV: test
+
+  jobs:
+    job1:
+        runs-on: ubuntu-latest
+        env:
+          name: welcome-job
+        steps:
+          - name: "Its a test welcome step"
+            run: echo "this is a $ENV job of $name"
+
+          - name: "printing inubilt env var"
+            run: echo "this is ${{ github.workflow}}"
+
+    job2:
+        runs-on: ubuntu-latest
+        steps:
+          - name: "This is to print custom-var"
+            run: echo "${{vars.CUSTOM_VAR}}"
