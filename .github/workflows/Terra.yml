@@ -3,7 +3,7 @@ name: Infra-auto-with-Terra
 on: 
  push:
     branches:
-     - main
+     - Terraform-infra
 
  pull_request:
     branches:
