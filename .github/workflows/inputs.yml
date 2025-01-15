@@ -1,0 +1,16 @@
+name: Input-Workflow
+on:
+  workflow_dispatch:
+   inputs:
+    choice1:
+     discription: 'select your choice'
+     required: 'true'
+     default: 'main'
+
+jobs:
+  building_the_choice_branch:
+   runs-on: ubuntu-latest
+   steps:
+    - name: print the choice1
+      run: echo "building on the branch: ${{ inputs.choice1}}"
+       
