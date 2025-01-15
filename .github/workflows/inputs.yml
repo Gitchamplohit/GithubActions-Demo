@@ -4,7 +4,7 @@ on:
    inputs:
     choice1:
      discription: 'select your choice'
-     required: 'true'
+     required: true
      default: 'main'
 
 jobs:
@@ -12,5 +12,5 @@ jobs:
    runs-on: ubuntu-latest
    steps:
     - name: print the choice1
-      run: echo "building on the branch: ${{ inputs.choice1}}"
+      run: echo "building on the branch- ${{ inputs.choice1}}"
        
