@@ -31,10 +31,14 @@ jobs:
         runs-on: self-hosted
         needs: Install_terraform
         env:
-            AWS_ACCESS_KEY_ID: ${{secrets.}}     
-            AWS_SECRET_ACCESS_KEY_ID: ${{secrets.}}  
+            AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}     
+            AWS_SECRET_ACCESS_KEY_ID: ${{secrets.AWS_SECRET_ACCESS_KEY}}  
             
         steps:
+
+            - name: code checkout
+              uses: actions/checkout@v3
+              
             - name: Terraform init
               run: terraform init
               
